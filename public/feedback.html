@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0f9d6b"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/app.css"><title>Feedback · SuperExpress</title></head>
+<body data-public>
+<header class="top"><div class="wrap top-in">
+  <a class="logo" href="/"><span class="logo-mark"><i class="fa-solid fa-basket-shopping"></i></span>SuperExpress</a>
+  <nav class="top-actions"><a class="btn soft" href="/"><i class="fa-solid fa-arrow-left"></i><span>Voltar às compras</span></a></nav>
+</div></header>
+<main class="wrap fb-wrap">
+  <section class="fb-hero"><h1>Sua opinião importa 💬</h1><p>Conte o que achou, sugira melhorias ou avise se algo não funcionou. Nossa equipe lê tudo e responde por aqui.</p></section>
+  <div class="fb-grid">
+    <form class="p-card" id="fbForm" novalidate>
+      <h2><i class="fa-regular fa-comment-dots"></i> Enviar feedback</h2>
+      <div class="alert" id="fbMsg" role="status" hidden></div>
+      <fieldset class="tipos"><legend class="rot">Tipo</legend>
+        <label class="tipo"><input type="radio" name="tipo" value="elogio" checked><span>👍<b>Elogio</b></span></label>
+        <label class="tipo"><input type="radio" name="tipo" value="sugestao"><span>💡<b>Sugestão</b></span></label>
+        <label class="tipo"><input type="radio" name="tipo" value="problema"><span>⚠️<b>Problema</b></span></label>
+        <label class="tipo"><input type="radio" name="tipo" value="duvida"><span>❓<b>Dúvida</b></span></label>
+      </fieldset>
+      <div class="field"><label>Como foi sua experiência? <small>(opcional)</small></label>
+        <div class="stars" id="estrelas" role="radiogroup" aria-label="Nota de 1 a 5">
+          <button type="button" data-n="1" aria-label="1 estrela">★</button><button type="button" data-n="2" aria-label="2 estrelas">★</button><button type="button" data-n="3" aria-label="3 estrelas">★</button><button type="button" data-n="4" aria-label="4 estrelas">★</button><button type="button" data-n="5" aria-label="5 estrelas">★</button>
+        </div><small id="notaTxt" class="dica">Toque nas estrelas para avaliar</small></div>
+      <div class="field"><label for="mensagem">Mensagem *</label><textarea class="f-input" id="mensagem" rows="5" maxlength="1000" placeholder="Escreva aqui o que você quer nos contar..." required></textarea><small class="dica" style="text-align:right"><span id="cont">0</span>/1000</small></div>
+      <div id="contato" class="row2"><div class="field"><label for="nome">Seu nome <small>(opcional)</small></label><input class="f-input" id="nome" maxlength="80" autocomplete="name"></div>
+        <div class="field"><label for="email">E-mail <small>(opcional)</small></label><input class="f-input" id="email" type="email" maxlength="120" autocomplete="email"></div></div>
+      <p class="dica" id="como" hidden></p>
+      <button class="btn pri block" type="submit" id="enviar">Enviar feedback</button>
+    </form>
+    <aside class="p-card"><h2><i class="fa-regular fa-clock"></i> Meus feedbacks</h2><div id="listaMeus"></div></aside>
+  </div>
+</main>
+<div id="toasts"></div>
+<script src="js/auth.js"></script><script src="js/feedback.js"></script>
+</body></html>

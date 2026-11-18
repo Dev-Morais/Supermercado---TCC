@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0f9d6b"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/app.css"><title>Entrar · SuperExpress</title></head>
+<body data-guest>
+<div class="auth-shell"><div class="auth">
+  <form class="auth-form" id="loginForm" novalidate>
+    <a class="logo" href="/"><span class="logo-mark"><i class="fa-solid fa-basket-shopping"></i></span>SuperExpress</a>
+    <h1>Bem-vindo de volta</h1><p>Entre para acessar seu carrinho e suas informações.</p>
+    <div class="alert" id="formMsg" role="alert" hidden></div>
+    <div class="field"><label for="email">E-mail</label><div class="inp"><i class="fa-regular fa-envelope"></i><input id="email" type="email" placeholder="voce@email.com" required autocomplete="email"></div></div>
+    <div class="field"><label for="password">Senha</label><div class="inp"><i class="fa-solid fa-lock"></i><input id="password" type="password" placeholder="Sua senha" required autocomplete="current-password"><button type="button" class="icon-btn eye" id="eye" aria-label="Mostrar senha"><i class="fa-solid fa-eye"></i></button></div></div>
+    <p style="text-align:right;margin:-6px 0 18px"><a href="#" id="forgot" style="color:var(--brand-d);font-weight:600;font-size:.86rem">Esqueceu a senha?</a></p>
+    <button class="btn pri block" type="submit">Entrar na conta</button>
+    <p class="auth-foot">Ainda não tem conta? <a href="register.html">Cadastre-se grátis</a> · <a href="/">Continuar sem login</a></p>
+  </form>
+  <div class="auth-side"><div class="big">🛒</div><h2>Compre conversando</h2><p>Mande sua lista por texto ou foto e o assistente monta o carrinho, confere o estoque e sugere trocas.</p></div>
+</div></div>
+<script src="js/auth.js"></script><script src="js/auth-pages.js"></script>
+</body></html>

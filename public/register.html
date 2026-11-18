@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0f9d6b"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/app.css"><title>Criar conta · SuperExpress</title></head>
+<body data-guest>
+<div class="auth-shell"><div class="auth">
+  <form class="auth-form" id="registerForm" novalidate>
+    <a class="logo" href="/"><span class="logo-mark"><i class="fa-solid fa-basket-shopping"></i></span>SuperExpress</a>
+    <h1>Crie sua conta</h1><p>Leva menos de um minuto. O carrinho que você já montou vem junto.</p>
+    <div class="alert" id="formMsg" role="alert" hidden></div>
+    <div class="field"><label for="name">Nome completo</label><div class="inp"><i class="fa-regular fa-user"></i><input id="name" type="text" placeholder="Seu nome" required autocomplete="name"></div></div>
+    <div class="field"><label for="email">E-mail</label><div class="inp"><i class="fa-regular fa-envelope"></i><input id="email" type="email" placeholder="voce@email.com" required autocomplete="email"></div></div>
+    <div class="field"><label for="password">Senha</label><div class="inp"><i class="fa-solid fa-lock"></i><input id="password" type="password" placeholder="Mínimo 6 caracteres" required autocomplete="new-password"><button type="button" class="icon-btn eye" id="eye" aria-label="Mostrar senha"><i class="fa-solid fa-eye"></i></button></div></div>
+    <div class="field"><label for="confirmPassword">Confirmar senha</label><div class="inp"><i class="fa-solid fa-lock"></i><input id="confirmPassword" type="password" placeholder="Repita a senha" required autocomplete="new-password"></div></div>
+    <button class="btn pri block" type="submit">Cadastrar e entrar</button>
+    <p class="auth-foot">Já tem conta? <a href="index.html">Faça login</a></p>
+  </form>
+  <div class="auth-side"><div class="big">🥑</div><h2>Junte-se ao SuperExpress</h2><p>Ofertas da semana, carrinho salvo e um assistente que entende a sua lista.</p></div>
+</div></div>
+<script src="js/auth.js"></script><script src="js/auth-pages.js"></script>
+</body></html>

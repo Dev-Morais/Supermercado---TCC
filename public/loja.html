@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0f9d6b"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/app.css"><title>SuperExpress · Supermercado online</title></head>
+<body data-public>
+<header class="top"><div class="wrap top-in">
+  <a class="logo" href="/"><span class="logo-mark"><i class="fa-solid fa-basket-shopping"></i></span>SuperExpress</a>
+  <label class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="busca" type="search" placeholder="Buscar leite, arroz, café..." autocomplete="off"></label>
+  <nav class="top-actions">
+    <a id="adminBtn" class="btn soft" href="admin.html" hidden><i class="fa-solid fa-screwdriver-wrench"></i><span>Painel</span></a>
+    <a id="fbBtn" class="btn ghost" href="feedback.html"><i class="fa-regular fa-comment-dots"></i><span>Feedback</span></a>
+    <a id="contaBtn" class="btn ghost" href="index.html"><i class="fa-regular fa-user"></i><span>Entrar</span></a>
+    <button id="abrirCarrinho" class="btn soft cart-btn"><i class="fa-solid fa-cart-shopping"></i><span>Carrinho</span><b id="badge">0</b></button>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div><h1>Faça suas compras conversando</h1><p>Mande a lista por texto ou foto. O assistente pergunta o tipo, a marca e o tamanho, confere o estoque e sugere trocas.</p>
+      <button id="heroChat" class="btn light"><i class="fa-solid fa-wand-magic-sparkles"></i> Montar com o assistente</button></div>
+    <div class="emojis" aria-hidden="true">🥛🍚☕</div>
+  </section>
+  <div class="chips" id="chips"></div>
+  <div class="sec-head"><h2 id="titulo">Todos os produtos</h2><span id="contagem"></span></div>
+  <div class="grid" id="grade"></div>
+</main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="gaveta" aria-label="Carrinho">
+  <header><h3><i class="fa-solid fa-cart-shopping"></i> Seu carrinho</h3><button class="icon-btn" id="fecharCarrinho" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button></header>
+  <div class="aviso" id="aviso" hidden><span>⚠️ Há itens sem estoque suficiente.</span><button class="btn pri" id="resolver" style="padding:6px 12px">Resolver</button></div>
+  <div id="itens"></div>
+  <footer><div class="total"><span>Total</span><span id="total">R$ 0,00</span></div><button class="btn pri block" id="finalizar">Finalizar compra</button></footer>
+</aside>
+
+<button class="fab" id="fab"><i class="fa-solid fa-comment-dots"></i><span>Assistente</span></button>
+<section class="chat" id="chat" aria-label="Assistente de compras">
+  <header class="chat-h"><div class="avatar"><i class="fa-solid fa-robot"></i><span class="dot"></span></div>
+    <div><b>Assistente SuperExpress</b><small>Monta o carrinho e confere o estoque</small></div>
+    <button class="icon-btn" id="fecharChat" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button></header>
+  <div class="quick"><button data-q="exemplo">📝 Exemplo de lista</button><button data-q="foto">📷 Foto da lista</button><button data-q="estoque">📦 Conferir estoque do carrinho</button><button data-q="feedback">💬 Feedback</button></div>
+  <div class="chat-msgs" id="msgs"></div>
+  <form class="chat-f" id="chatForm">
+    <button type="button" class="icon-btn" id="anexo" aria-label="Enviar foto"><i class="fa-solid fa-camera"></i></button>
+    <input type="file" id="arquivo" accept="image/*" hidden>
+    <textarea id="texto" rows="1" placeholder="Digite sua lista (ex.: leite, arroz 5kg)"></textarea>
+    <button class="send" aria-label="Enviar"><i class="fa-solid fa-paper-plane"></i></button>
+  </form>
+</section>
+<div id="toasts"></div>
+<script src="js/auth.js"></script><script src="js/loja.js"></script>
+</body></html>

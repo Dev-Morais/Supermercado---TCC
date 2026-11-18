@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0f9d6b"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/app.css"><title>Meu perfil · SuperExpress</title></head>
+<body data-private>
+<header class="top"><div class="wrap top-in">
+  <a class="logo" href="/"><span class="logo-mark"><i class="fa-solid fa-basket-shopping"></i></span>SuperExpress</a>
+  <nav class="top-actions"><a class="btn soft" href="/"><i class="fa-solid fa-arrow-left"></i><span>Voltar às compras</span></a></nav>
+</div></header>
+<main class="wrap perfil">
+  <aside><div class="p-card p-sum">
+    <div class="av" id="avatar">?</div><h1 id="pNome"></h1><p class="mu" id="pEmail"></p><p class="mu" id="pDesde"></p>
+    <div class="stack"><a class="btn pri" href="/"><i class="fa-solid fa-cart-shopping"></i> Continuar comprando</a><button class="btn" id="sair"><i class="fa-solid fa-right-from-bracket"></i> Sair da conta</button></div>
+  </div></aside>
+  <section>
+    <form class="p-card" id="dadosForm">
+      <h2><i class="fa-regular fa-user"></i> Dados pessoais e entrega</h2>
+      <div class="row2"><div class="field"><label for="name">Nome completo</label><input class="f-input" id="name" required minlength="3"></div>
+        <div class="field"><label for="email">E-mail</label><input class="f-input" id="email" readonly></div></div>
+      <div class="field"><label for="phone">Telefone</label><input class="f-input" id="phone" type="tel" placeholder="(69) 99999-9999"></div>
+      <div class="row2"><div class="field"><label for="cep">CEP</label><input class="f-input" id="cep" placeholder="00000-000"></div>
+        <div class="field"><label for="city">Cidade</label><input class="f-input" id="city"></div></div>
+      <div class="row2"><div class="field"><label for="street">Rua</label><input class="f-input" id="street"></div>
+        <div class="field"><label for="number">Número</label><input class="f-input" id="number"></div></div>
+      <button class="btn pri" type="submit">Salvar alterações</button><p class="note" id="dadosNote"></p>
+    </form>
+    <form class="p-card" id="senhaForm">
+      <h2><i class="fa-solid fa-lock"></i> Alterar senha</h2>
+      <div class="field"><label for="oldPass">Senha atual</label><input class="f-input" id="oldPass" type="password" required></div>
+      <div class="row2"><div class="field"><label for="newPass">Nova senha</label><input class="f-input" id="newPass" type="password" required minlength="6"></div>
+        <div class="field"><label for="newPass2">Confirmar nova senha</label><input class="f-input" id="newPass2" type="password" required></div></div>
+      <button class="btn pri" type="submit">Atualizar senha</button><p class="note" id="senhaNote"></p>
+    </form>
+    <div class="p-card"><h2><i class="fa-solid fa-triangle-exclamation"></i> Zona de risco</h2>
+      <p style="color:var(--muted);margin-bottom:12px;font-size:.9rem">Excluir a conta apaga seus dados. Essa ação não pode ser desfeita.</p>
+      <button class="btn danger" id="excluir">Excluir minha conta</button></div>
+  </section>
+</main>
+<script src="js/auth.js"></script><script src="js/perfil.js"></script>
+</body></html>

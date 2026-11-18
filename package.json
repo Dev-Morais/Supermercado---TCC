@@ -1,0 +1,21 @@
+{
+  "name": "superexpress",
+  "version": "3.0.0",
+  "description": "SuperExpress - supermercado com assistente que monta o carrinho (texto/foto), com variações de produto e checagem de estoque",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "admin": "node criar-admin.js",
+    "migrar": "node migrar-sqlite.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^2.0.0",
+    "tesseract.js": "^5.1.1",
+    "@tesseract.js-data/por": "^1.0.0",
+    "pg": "^8.13.0"
+  }
+}
